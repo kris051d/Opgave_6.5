@@ -18,12 +18,13 @@ public class Main {
     }
 
     public static boolean isDoubloon(String s){
-        String testString = s.toLowerCase();
-        for(int index=0; index<testString.length();index++){
+        //Fjernede en ligegyldig variabel
+        s = s.toLowerCase();
+        for(int index=0; index<s.length();index++){
             int appearance = 0;
-            for(int index2=0; index2<testString.length();index2++){
-                char currentChar = testString.charAt(index);
-                if(testString.charAt(index2) == currentChar){
+            for(int index2=0; index2<s.length();index2++){
+                char currentChar = s.charAt(index);
+                if(s.charAt(index2) == currentChar){
                     appearance++;
                 }
             }
